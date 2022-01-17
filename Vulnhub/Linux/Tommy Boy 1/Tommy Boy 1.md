@@ -1,9 +1,12 @@
 # NMAP
-- tcp/22
-- tcp/80
-- tcp/8008
+
+* tcp/22
+* tcp/80
+* tcp/8008
+
 ## FFUF (tcp/80)
-```
+
+````
 ┌──(root💀kali)-[~/vulnHub/TommyBoy1]
 └─# ffuf -u http://192.168.56.129/FUZZ -w /usr/share/wordlists/dirb/common.txt  -fc 301
 
@@ -38,10 +41,11 @@ robots.txt              [Status: 200, Size: 132, Words: 6, Lines: 6]
 server-status           [Status: 403, Size: 302, Words: 22, Lines: 12]
 :: Progress: [4614/4614] :: Job [1/1] :: 429 req/sec :: Duration: [0:00:04] :: Errors: 0 ::
 
-```
+````
 
 ## FFUF (tcp/8008)
-```
+
+````
 ┌──(root💀kali)-[~/vulnHub/TommyBoy1]
 └─# ffuf -u http://192.168.56.129:8008/FUZZ -w /usr/share/wordlists/dirb/common.txt
 
@@ -72,21 +76,23 @@ ________________________________________________
 index.html              [Status: 200, Size: 295, Words: 35, Lines: 13]
 server-status           [Status: 403, Size: 304, Words: 22, Lines: 12]
 :: Progress: [4614/4614] :: Job [1/1] :: 4853 req/sec :: Duration: [0:00:01] :: Errors: 0 ::
-```
+````
 
 # Port 80 (HTTP)
+
 1. Proceed to `/robots`
-	```
-	┌──(root💀kali)-[~/vulnHub/TommyBoy1]
-	└─# curl http://192.168.56.129/robots.txt
-	User-agent: *
-	Disallow: /6packsofb...soda
-	Disallow: /lukeiamyourfather
-	Disallow: /lookalivelowbridge
-	Disallow: /flag-numero-uno.txt
-	```
-2. Proceed to directories in robots.txt
-	- `/6packsofb...soda`
-	![TommyBoy1 6packsofb...soda.png](TommyBoy1%206packsofb...soda.png)
-	- `/lukeiamyourfather`
-		![TommyBoy1 lukeiamyourfather.png](TommyBoy1%20lukeiamyourfather.png)
+   ````
+   ┌──(root💀kali)-[~/vulnHub/TommyBoy1]
+   └─# curl http://192.168.56.129/robots.txt
+   User-agent: *
+   Disallow: /6packsofb...soda
+   Disallow: /lukeiamyourfather
+   Disallow: /lookalivelowbridge
+   Disallow: /flag-numero-uno.txt
+   ````
+
+1. Proceed to directories in robots.txt
+   * `/6packsofb...soda`
+     ![TommyBoy1 6packsofb...soda.png](TommyBoy1%206packsofb...soda.png)
+   * `/lukeiamyourfather`
+     ![TommyBoy1 lukeiamyourfather.png](TommyBoy1%20lukeiamyourfather.png)
