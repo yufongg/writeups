@@ -1,4 +1,6 @@
 # Writeups
+The writeups are exported from Obsidian md, so the format looks kind of bad.
+
 # Machines:
 
 | # | Platform | Machines |
@@ -9,9 +11,7 @@
 
 
 # Vulnhub TJ Null's List (Not Completed Yet)
-
-
-  | Box                                        | How to Root                                                                                                                                                                                                              |
+  | Box                                        | Steps to Root                                                                                                                                                                                                              |
   | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
   | [Kioptrix - L1 ](https://github.com/yufongg/writeups/blob/main/Vulnhub/Linux/kioprtix%20-%20L1.pdf)                          | <ol><li>Compile exploits to root</ol></li>                                                                                                                                                                               |
   | [Kioptrix - L2 ](https://github.com/yufongg/writeups/blob/main/Vulnhub/Linux/kioptrix%20-%20L2.pdf)                          | <ol><li>SQLi Auth Bypass</li><li>Command Injection</li><li>Kernel Exploit</li></ol>                                                                                                                                      |
