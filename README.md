@@ -1,4 +1,4 @@
-# writeups
+# Writeups
 # Machines:
 
 | # | Platform | Machines |
@@ -8,7 +8,7 @@
 
 
 
-# Vulnhub TJ Null's List
+# Vulnhub TJ Null's List (Not Completed Yet)
 
 
   | Box                                        | How to Root                                                                                                                                                                                                              |
@@ -36,10 +36,10 @@
   | [PinkysPalacev2](https://github.com/yufongg/writeups/blob/main/Vulnhub/Linux/Pinkys%20Palace%20v2.pdf)                          | <ol><li>Hidden Dir (/secret)</li><li>Port Knocking</li><li>Bruteforce (cewl wordlist)</li><li>Bruteforce SSH key </li><li>SUID Binary</li><li>Cronjob</li><li>64 Bit Buffer Overflow</li></ol>                           |
   | [Solid State 1](https://github.com/yufongg/writeups/blob/main/Vulnhub/Linux/Solid%20State%201.pdf)                           | <ol><li>Service Exploit</li><li>Cronjob</li></ol>                                                                                                                                                                        |
   | [Escalate_Linux](https://github.com/yufongg/writeups/blob/main/Vulnhub/Linux/Escalate_Linux.pdf)                          | <ol><li>Enumerate Users (SMB)</li><li>HTTP RCE</li><li>no_root_squash/SUID Binary (Path Hijacking)/SUID Binary</li></ol>                                                                                                 |
-  | [Wintermute](https://github.com/yufongg/writeups/blob/main/Vulnhub/Linux/Wintermute.pdf)                              | <ol><li>Hidden Dir (/turing-bolo)</li><li>LFI</li><li>LFI</li><li>SUID Binary</li><li>Pivot</li><li>CMS Exploit</li><li>LXD/Kernel Exploit</li></ol>                                                                     |
+  | [Wintermute](https://github.com/yufongg/writeups/blob/main/Vulnhub/Linux/Wintermute.pdf)                              | <ol><li>Hidden Dir (/turing-bolo)</li><li>LFI</li><li>SUID Binary</li><li>Pivot</li><li>CMS Exploit</li><li>LXD/Kernel Exploit</li></ol>                                                                     |
   | [Born2Root](https://github.com/yufongg/writeups/blob/main/Vulnhub/Linux/Born2Root.pdf)                               | <ol><li>Hidden Dir (/icons)</li><li>Cronjob</li><li>Bruteforce SSH</li><li>Reused Creds</li></ol>                                                                                                                        |
   | [Stapler1](https://github.com/yufongg/writeups/blob/main/Vulnhub/Linux/Stapler%201.pdf)                                | <ol><li>Wordpress (Plugin)/(Bruteforce)/ Bruteforce FTP</li><li>Creds Found in Linux/Cronjob/Kernel Exploit</li></ol>                                                                                                    |
-  | [Digitalworld.local(Bravery)](https://github.com/yufongg/writeups/blob/main/Vulnhub/Linux/Digitalworld.local%20(Bravery).pdf)             | <ol><li>Enumerate Users (SMB)</li><li>Create Wordlist</li><li>Create Wordlist</li><li>Bruteforce SMB Fileshare</li><li>HTTP Dir Enum</li><li>CMS Exploit</li><li>no_root_squash/Cronjob/SUID Binary (GTFO Bin)</li></ol> |
+  | [Digitalworld.local(Bravery)](https://github.com/yufongg/writeups/blob/main/Vulnhub/Linux/Digitalworld.local%20(Bravery).pdf)             | <ol><li>Enumerate Users (SMB)</li><li>Create Wordlist</li><li>Bruteforce SMB Fileshare</li><li>HTTP Dir Enum</li><li>CMS Exploit</li><li>no_root_squash/Cronjob/SUID Binary (GTFO Bin)</li></ol> |
   | [Digitalworld.local(Development)-notdone]() |                                                                                                                                                                                                                          |
   | [Digitalworld.local(FALL)-notdone]()        |                                                                                                                                                                                                                          |
   | [Digitalworld.local(JOY)-notdone]()         |                                                                                                                                                                                                                          |
