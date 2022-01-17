@@ -87,6 +87,6 @@ server-status           [Status: 403, Size: 304, Words: 22, Lines: 12]
 	```
 2. Proceed to directories in robots.txt
 	- `/6packsofb...soda`
-	![TommyBoy1 6packsofb...soda.png](TommyBoy1%206packsofb...soda.png)
+	![TommyBoy1 6packsofb...soda.png](../image/TommyBoy1%206packsofb...soda.png)
 	- `/lukeiamyourfather`
 		![TommyBoy1 lukeiamyourfather.png](TommyBoy1%20lukeiamyourfather.png)
