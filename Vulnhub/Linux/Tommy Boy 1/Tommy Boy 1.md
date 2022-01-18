@@ -159,8 +159,7 @@ server-status           [Status: 403, Size: 304, Words: 22, Lines: 12]
 	```
 9. While bruteforcing, look for useful information in the wordpress blog
 10. Found 2nd Flag
-	![](images/Pasted%20image%2020220118054504.png)
-	![](images/Pasted%20image%2020220118163420.png)
+	![](images/Pasted%20image%2020220118054504.png)![](images/Pasted%20image%2020220118163420.png)
 11.  Proceed to "Son OF A!" Post
 	![](images/Pasted%20image%2020220118055905.png)
 12. Proceed to `/richard` & download image
@@ -353,8 +352,7 @@ server-status           [Status: 403, Size: 304, Words: 22, Lines: 12]
 	- fatguyinalittlecoat1938!!
 
 ## SSH 
-1. SSH w/ found creds
-	![](images/Pasted%20image%2020220118185335.png)
+1. SSH w/ found creds ![](images/Pasted%20image%2020220118185335.png)
 2. Obtain 4th flag
 	![](images/Pasted%20image%2020220118185550.png)
 	- Hint
@@ -398,8 +396,7 @@ server-status           [Status: 403, Size: 304, Words: 22, Lines: 12]
 	![](images/Pasted%20image%2020220118192523.png)
 6. Execute reverse shell at 
 	- `prehistoricforest/wp-content/themes/twentysixteen/404.php`
-7. www-data shell obtained
-	![](images/Pasted%20image%2020220118192851.png)
+7. www-data shell obtained ![](images/Pasted%20image%2020220118192851.png)
 8. Obtain 5th flag
 	![](images/Pasted%20image%2020220118192927.png)
 9. Compile the flags
