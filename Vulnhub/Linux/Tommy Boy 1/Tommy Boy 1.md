@@ -287,7 +287,7 @@ server-status           [Status: 403, Size: 304, Words: 22, Lines: 12]
 	![](images/Pasted%20image%2020220118172627.png)
 5. Proceed to directories found in `fallon1.html`
 	- hint.txt
-		![](images/Pasted%20image%2020220118172704.png)
+		![](images/Pasted%20image%2020220118212002.png)
 	- flagtres.txt (Flag 3)
 		![Pasted image 20220118211730.png](images/Pasted%20image%2020220118211730.png)
 	- Big Tom's encrypted pw backups 
@@ -352,8 +352,9 @@ server-status           [Status: 403, Size: 304, Words: 22, Lines: 12]
 	- fatguyinalittlecoat1938!!
 
 ## SSH 
-1. SSH w/ found creds ![](images/Pasted%20image%2020220118185335.png)
-2. Obtain 4th flag
+1. SSH w/ found creds 
+	![](images/Pasted%20image%2020220118212103.png)
+1. Obtain 4th flag
 	![](images/Pasted%20image%2020220118185550.png)
 	- Hint
 		- /5.txt
@@ -396,9 +397,10 @@ server-status           [Status: 403, Size: 304, Words: 22, Lines: 12]
 	![](images/Pasted%20image%2020220118192523.png)
 6. Execute reverse shell at 
 	- `prehistoricforest/wp-content/themes/twentysixteen/404.php`
-7. www-data shell obtained ![](images/Pasted%20image%2020220118192851.png)
+7. www-data shell obtained 
+	![](images/Pasted%20image%2020220118192851.png)
 8. Obtain 5th flag
-	![](images/Pasted%20image%2020220118192927.png)
+	![](Pasted%20image%2020220118212212.png)
 9. Compile the flags
 	```
 	┌──(root💀kali)-[~/vulnHub/TommyBoy1]
