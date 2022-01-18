@@ -289,7 +289,7 @@ server-status           [Status: 403, Size: 304, Words: 22, Lines: 12]
 	- hint.txt
 		![](images/Pasted%20image%2020220118172704.png)
 	- flagtres.txt (Flag 3)
-		![](images/Pasted%20image%2020220118172617.png)
+		![Pasted image 20220118211730.png](images/Pasted%20image%2020220118211730.png)
 	- Big Tom's encrypted pw backups 
 		- Password encrypted zip file
 ## Cracking Zip File
