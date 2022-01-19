@@ -413,7 +413,7 @@ by Ben "epi" Risher 🤓                 ver: 2.4.1
 	```
 	![](images/Pasted%20image%2020220120061230.png)
 5. Flag
-	![](images/Pasted%20image%2020220120061405.png)
+	![](images/Pasted%20image%2020220120064211.png)
 
 ## Root (Service) 
 1. Service script is writable
@@ -426,7 +426,7 @@ by Ben "epi" Risher 🤓                 ver: 2.4.1
 3. Reboot 
 	![](images/Pasted%20image%2020220120062215.png)
 
-# Root (kernel exploit) - Did not work
+## Root (kernel exploit) - Did not work
 1. Kernel version
 	![](images/Pasted%20image%2020220120062258.png)
 2. Find exploit 
