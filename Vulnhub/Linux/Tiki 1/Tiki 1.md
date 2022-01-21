@@ -1,5 +1,5 @@
 # Recon
----
+
 ## NMAP
 - tcp/22
 - tcp/80
@@ -73,7 +73,7 @@ tiki                    [Status: 301, Size: 317, Words: 20, Lines: 10]
 
 
 # Initial Foothold
----
+
 ## TCP/139,445 - SMB 
 1. Earlier, we enumerated SMB Fileshare w/ a NULL session, we have READ access to `Notes` fileshare
 2. Download all files in `Notes` fileshare & view its content
@@ -147,7 +147,7 @@ tiki                    [Status: 301, Size: 317, Words: 20, Lines: 10]
 ![](images/Pasted%20image%2020220121235722.png)
 
 # Privilege Escalation
----
+
 ## Root via Sudo
 ```
 silky@ubuntu:~$ sudo -l
