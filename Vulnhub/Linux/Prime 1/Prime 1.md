@@ -541,7 +541,7 @@ secret.txt              [Status: 200, Size: 412, Words: 66, Lines: 16]
 
 ## Root - Via Kernel Exploit
 1. Ran linpeas
-	![](Pasted%20image%2020220122041103.png)
+	![](images/Pasted%20image%2020220122041103.png)
 2. Search for kernel exploits
 	```
 	┌──(root💀kali)-[~/vulnHub/Prime1/192.168.1.103/exploit/kernel]
@@ -559,7 +559,7 @@ secret.txt              [Status: 200, Size: 412, Words: 66, Lines: 16]
 	└─# gcc 45010.c -m64 -o exploit -D_GNU_SOURCE
 	```
 4. Transfer & Exploit
-	![](Pasted%20image%2020220122042300.png)
+	![](images/Pasted%20image%2020220122042300.png)
 
 	
 ---
