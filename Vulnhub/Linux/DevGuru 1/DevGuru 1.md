@@ -333,7 +333,7 @@ debug                   [Status: 200, Size: 160, Words: 18, Lines: 5]
 
 ## Root - Via Sudo Exploit + Sudo GTFO Bin
 1. Ran linpeas
-	![](images/Pasted%20image%2020220123051939.png)
+	![](images/Pasted%20image%2020220123052110.png)
 2. Find exploit
 	 - https://www.exploit-db.com/exploits/47502
 	 - Saw this in TryHackMe: AgentSudo
