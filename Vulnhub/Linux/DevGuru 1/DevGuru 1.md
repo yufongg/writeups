@@ -117,8 +117,8 @@ debug                   [Status: 200, Size: 160, Words: 18, Lines: 5]
 1. Proceed to `debug`
 	![](images/Pasted%20image%2020220122204915.png)
 2. Both directories returned 404.
-		![](images/Pasted%20image%2020220122204944.png)
-		- Gitea: 1.12.5
+	![](images/Pasted%20image%2020220122204944.png)
+	- Gitea: 1.12.5
 2. Proceed to `http://192.168.236.6:8585/explore/users`
 	![](images/Pasted%20image%2020220122205020.png)
 	- frank
