@@ -486,7 +486,7 @@ secret.txt              [Status: 200, Size: 412, Words: 66, Lines: 16]
 	```
 	![](images/Pasted%20image%2020220122034745.png)
 	
-## Root - Via Sudo + 
+## Root - Via Sudo 
 1. Check for sudo access 
 	```
 	saket@ubuntu:~$ sudo -l
