@@ -117,12 +117,12 @@ debug                   [Status: 200, Size: 160, Words: 18, Lines: 5]
 1. Proceed to `debug`
 	![](images/Pasted%20image%2020220122204915.png)
 2. Both directories returned 404.
-	![](images/Pasted%20image%2020220122204944.png)
+		![](images/Pasted%20image%2020220122204944.png)
 	- Gitea: 1.12.5
-2. Proceed to `http://192.168.236.6:8585/explore/users`
+3. Proceed to `http://192.168.236.6:8585/explore/users`
 	![](images/Pasted%20image%2020220122205020.png)
 	- frank
-3. Found an exploit that requires authentication
+4. Found an exploit that requires authentication
 	```
 	┌──(root💀kali)-[~/tools/GitTools/Extractor]
 	└─# searchsploit gitea 1.12.5
@@ -132,7 +132,7 @@ debug                   [Status: 200, Size: 160, Words: 18, Lines: 5]
 	Gitea 1.12.5 - Remote Code Execution (Authenticated) | multiple/webapps/49571.py
 	------------------------------------------------------------------------------------
 	```
-4. Unable to use exploit, no valid credentials
+5. Unable to use exploit, no valid credentials
 	
 
 
@@ -183,7 +183,7 @@ debug                   [Status: 200, Size: 160, Words: 18, Lines: 5]
 	...
 	```
 5. View `config/database.php`
-	![](images/Pasted%20image%2020220123014455.png)
+	![](images/Pasted%20image%2020220123051458.png)
 	- october:SQ66EBYx4GT3byXH
 6. Login to Adminer
 	![](images/Pasted%20image%2020220123014726.png)
