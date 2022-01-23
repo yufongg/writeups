@@ -282,7 +282,7 @@ update.php              [Status: 200, Size: 18, Words: 2, Lines: 1]
 	firefart@Kioptrix3:~# 
 	```
 	![](images/Pasted%20image%2020220123200759.png)
-5. Flag
+5. Obtain Root Flag
 	![](images/Pasted%20image%2020220123200831.png)
 	
 ---
