@@ -108,7 +108,7 @@ IPC$                                              	NO ACCESS		IPC Service
 	> baseball
 	> EOF
 	```
-4. [Bruteforce SMB Fileshare]([https://github.com/yufongg/SMB-Fileshare-Bruteforce)
+4. [Bruteforce SMB Fileshare](https://github.com/yufongg/SMB-Fileshare-Bruteforce)
 	```
 	┌──(root💀kali)-[~/vulnHub/Symfonos-1/192.168.56.123/loot/smb]
 	└─# ./smb_bruteforce.sh $ip usernames.txt passwords.txt helios
