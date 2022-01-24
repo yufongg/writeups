@@ -72,10 +72,10 @@ SMB         192.168.236.8   445    SYMFONOS         IPC$
 [+] Guest session   	IP: 192.168.236.8:445	Name: unknown                                        
 Disk                                                Permissions		Comment
 ----                                                -----------		-------
-print$                                            	NO ACCESS		Printer Drivers
-helios                                            	NO ACCESS		Helios personal share
-anonymous                                         	READ ONLY	
-IPC$                                              	NO ACCESS		IPC Service
+print$                                              NO ACCESS		Printer Drivers
+helios                                              NO ACCESS		Helios personal share
+anonymous                                           READ ONLY	
+IPC$                                                NO ACCESS		IPC Service
 ```
 - `helios`
 - `anonymous`, READ 
@@ -216,7 +216,7 @@ IPC$                                              	NO ACCESS		IPC Service
 	┌──(root💀kali)-[~/vulnHub/Symfonos-1/192.168.56.123/loot/smb]
 	└─# searchsploit site editor wordpress
 	---------------------------------------------------------------------------------- 
-	|Exploit Title   										    |  Path
+	|Exploit Title   					    |  Path
 	----------------------------------------------------------------------------------
 	WordPress Plugin Site Editor 1.1.1 - Local File Inclusion   | php/webapps/44340.txt
 	----------------------------------------------------------------------------------
@@ -226,7 +226,7 @@ IPC$                                              	NO ACCESS		IPC Service
 	┌──(root💀kali)-[~/vulnHub/Symfonos-1/192.168.56.123/loot/smb]
 	└─# searchsploit wordpress mail masta
 	----------------------------------------------------------------------------------- 
-	| Exploit Title 		                                   | Path                 |
+	| Exploit Title 		                           | Path           
 	----------------------------------------------------------------------------------- 
 	WordPress Plugin Mail Masta 1.0 - Local File Inclusion     | php/webapps/40290.txt
 	WordPress Plugin Mail Masta 1.0 - Local File Inclusion (2) | php/webapps/50226.py
