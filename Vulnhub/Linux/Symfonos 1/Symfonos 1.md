@@ -140,7 +140,7 @@ IPC$                                                NO ACCESS		IPC Service
 	![](images/Pasted%20image%2020220124032036.png)
 	- `/h3l105`
 
-## TCP/80 - HTTP - CMS Exploit
+## TCP/80 - HTTP - Wordpress Plugin Exploit
 1. Proceed to `/h3l105`
 	![](images/Pasted%20image%2020220124032349.png)
 	- Wordpress CMS
