@@ -96,12 +96,12 @@ SMB         192.168.236.7   445    SYMFONOS2        IPC$                        
 
 ┌──(root💀kali)-[~/vulnHub/Symfonos-2/192.168.236.7/exploit]
 └─# smbmap -H $ip
-[+] Guest session   			IP: 192.168.236.7:445   Name: unknown         
+[+] Guest session   		  IP: 192.168.236.7:445   Name: unknown         
 	Disk                                                Permissions		Comment
 	----                                                -----------		-------
-	print$                                            	NO ACCESS		Printer 
-	anonymous                                         	READ ONLY	
-	IPC$                                              	NO ACCESS		IPC Service (Samba 4.5.16-Debian)
+	print$                                              NO ACCESS		Printer 
+	anonymous                                           READ ONLY	
+	IPC$                                                NO ACCESS		IPC Service (Samba 4.5.16-Debian)
 ```
 - `anonymous`, READ ONLY
 
@@ -130,12 +130,12 @@ SMB         192.168.236.7   445    SYMFONOS2        IPC$                        
 1. Search exploits for `ProFTPD 1.3.5`
 	```
 	-----------------------------------------------------------------------------------
-	Exploit Title 											   |  Path				  |	
+	Exploit Title						   |  Path		  
 	----------------------------------------------------------------------------------- 
 	ProFTPd 1.3.5 - 'mod_copy' Command Execution (Metasploit)  | linux/remote/37262.rb
 	ProFTPd 1.3.5 - 'mod_copy' Remote Command Execution        | linux/remote/36803.py
 	ProFTPd 1.3.5 - 'mod_copy' Remote Command Execution (2)    | linux/remote/49908.py
-	ProFTPd 1.3.5 - File Copy 								   | linux/remote/36742.txt
+	ProFTPd 1.3.5 - File Copy 				   | linux/remote/36742.txt
 	```
 	- `RCE` requires us to have access to a directory
 2. Use `ProFTPd 1.3.5 - File Copy `
