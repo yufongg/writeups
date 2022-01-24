@@ -1,8 +1,8 @@
 # Recon
 ## NMAP
 -  All ports are open
-
-## Ferox
+## TCP/80 - HTTP
+### Ferox
 ```
 ┌──(root💀kali)-[~/vulnHub/Breach1]
 └─# feroxbuster -u http://192.168.110.140 -w /usr/share/wordlists/dirb/common.txt -o /root/vulnHub/Breach1/192.168.110.140/scans/tcp80/ferox_common.txt
@@ -67,7 +67,7 @@ by Ben "epi" Risher 🤓                 ver: 2.4.1
 ```
 
 # Initial Access
-## Port 80 (HTTP)
+## Port 80 - HTTP - Obtain Wireshark File + Key
 1. Proceed to `192.168.110.140/index.html` & View page source
 	![](images/Pasted%20image%2020220120004916.png)
 	![](images/Pasted%20image%2020220120012040.png)
