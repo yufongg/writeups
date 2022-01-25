@@ -130,7 +130,7 @@ index.html              [Status: 200, Size: 64, Words: 3, Lines: 4]
 	```
 	![](images/Pasted%20image%2020220125023505.png)
 	![](images/Pasted%20image%2020220125030816.png)
-	- Successfully login, could not do anything w/ the login apge
+	- Successfully login, could not do anything w/ the login page
 	- Instead of Authentication Bypass, we have to enumerate the database
 8. Run SQLMap
 	```
