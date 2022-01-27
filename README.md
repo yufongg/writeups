@@ -1,5 +1,4 @@
 # Writeups
-The writeups are exported from Obsidian md, so the format looks kind of bad.
 
 # Machines:
 
