@@ -395,6 +395,6 @@ index.html              [Status: 200, Size: 252, Words: 10, Lines: 12]
 
 
 ---
-Tags:
+Tags: #tcp/110-pop3/bruteforce #tcp/80-http/web-app-cms-exploit #tcp/80-http/rce  #linux-priv-esc/kernel-exploit  
 
 ---
