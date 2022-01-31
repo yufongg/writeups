@@ -61,18 +61,18 @@ PORT      STATE SERVICE VERSION
 # Initial Foothold
 ## TCP/80 - HTTP - SeedDMS Misconfiguration 
 1. Proceed to `http://192.168.110.7`
-	![](Pasted%20image%2020220201004026.png)
+	![](images/Pasted%20image%2020220201004026.png)
 2. Proceed to `Contact`
-	![](Pasted%20image%2020220201004132.png)
+	![](images/Pasted%20image%2020220201004132.png)
 	- Tried to do SQLi, failed
 3. Take a look at the files being used for this webserver
-	![](Pasted%20image%2020220201004342.png)
+	![](images/Pasted%20image%2020220201004342.png)
 	- `Inspect Element -> Sources` 
 1. Proceed to `js/main.js`, found hidden text
-	![](Pasted%20image%2020220201004524.png)
+	![](images/Pasted%20image%2020220201004524.png)
 	- `/seeddms51x/seeddms-5.1.22/`
 5. Proceed to `/seeddms51x/seeddms-5.1.22/`
-	![](Pasted%20image%2020220201012256.png)
+	![](images/Pasted%20image%2020220201012256.png)
 	- Tried SQLi Auth Bypass, failed
 	- Tried Default Creds, admin:admin, failed
 6. [Download](https://sourceforge.net/projects/seeddms/files/seeddms-5.1.22/seeddms-quickstart-5.1.22.tar.gz/download) `seeddms-5.1.22` to analyze the directory structure
@@ -103,10 +103,10 @@ PORT      STATE SERVICE VERSION
 	├── settings.xml.template
 	└── stopwords.txt
 	```
-	![](Pasted%20image%2020220201014045.png)
+	![](images/Pasted%20image%2020220201014045.png)
 	- If we are able to view `settings.xml`, we are able to obtain SQL/SMTP credentials
 9. Proceed to `http://192.168.110.7/seeddms51x/conf/settings.xml`
-	![](Pasted%20image%2020220201014551.png)
+	![](images/Pasted%20image%2020220201014551.png)
 	- seeddms:seeddms
 	
 ## TCP/3306 - mysql
@@ -217,7 +217,7 @@ PORT      STATE SERVICE VERSION
 	Rows matched: 1  Changed: 1  Warnings: 0
 	```
 3. Login w/ admin:password
-	![](Pasted%20image%2020220201021053.png)
+	![](images/Pasted%20image%2020220201021053.png)
 
 ## Back to TCP/80 - HTTP - SeedDMS RCE
 1. Search exploits for `seeddms-5.1.22`
@@ -229,17 +229,17 @@ PORT      STATE SERVICE VERSION
 
 2. Tried `php/webapps/50062.py`, did not work
 3. View `php/webapps/47022.txt`
-	![](Pasted%20image%2020220201023437.png)
+	![](images/Pasted%20image%2020220201023437.png)
 4. Exploit
 	1. Add a document
-		![](Pasted%20image%2020220201023802.png)
+		![](images/Pasted%20image%2020220201023802.png)
 		- Take note of 
 			- Document ID: 6
 			- Version: 1
 	2. Execute reverse shell
 		- Proceed to `seeddms51x/data/1048576/6/1.php`
 	3. Obtain www-data shell
-		![](Pasted%20image%2020220201024310.png)
+		![](images/Pasted%20image%2020220201024310.png)
 
 ## Alternate Way - Log File
 1. Fuzz directory for log files
@@ -300,7 +300,7 @@ PORT      STATE SERVICE VERSION
 ## Saket - Via Creds Found
 1. Earlier, we obtained Saket's credentials
 2. Switch to saket w/ saket:`Saket@#$1337`
-	![](Pasted%20image%2020220201024743.png)
+	![](images/Pasted%20image%2020220201024743.png)
 ## Root - Via Sudo
 1. After browsing through saket's home directory, there are firefox files
 2. Obtain firefox files to extract password from it
@@ -347,7 +347,7 @@ PORT      STATE SERVICE VERSION
 	saket@ubuntu:~/.mozilla/firefox/jokfpwvh.default-release$ sudo su
 	```
 7. Obtain root
-	![](Pasted%20image%2020220201040217.png)
+	![](images/Pasted%20image%2020220201040217.png)
 
 
 
