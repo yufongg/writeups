@@ -39,6 +39,7 @@ js                      [Status: 301, Size: 311, Words: 20, Lines: 10]
 - No interesting directories enumerated
 
 ## TCP/33060 - SOCKS5
+### NMAP Scan
 ```
 ┌──(root💀kali)-[~/vulnHub/HackMePlease]
 └─# nmap -p 33060 $ip --script socks-auth-info -sV -sC -A -v
@@ -145,8 +146,8 @@ PORT      STATE SERVICE VERSION
 	| tblAttributeDefinitions      |
 	| tblCategory                  |
 	| tblDocumentApproveLog        |
-	| ...						   |
-	| tblUsers					   |
+	| ...			       |	
+	| tblUsers		       |
 	| tblWorkflows                 |
 	| users                        |
 	+------------------------------+
