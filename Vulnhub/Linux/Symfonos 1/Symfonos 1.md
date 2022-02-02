@@ -1,3 +1,19 @@
+# Table of contents
+
+- [Recon](#recon)
+  - [TCP/80 - HTTP](#tcp80---http)
+    - [FFUF](#ffuf)
+  - [TCP/139,445 - SMB](#tcp139445---smb)
+    - [Enum4linux](#enum4linux)
+    - [Crackmapexec+SMBMap](#crackmapexecsmbmap)
+- [Initial Foothold](#initial-foothold)
+  - [TCP/139,445 - SMB Fileshare Bruteforce](#tcp139445---smb-fileshare-bruteforce)
+  - [TCP/80 - HTTP - Wordpress Plugin Exploit](#tcp80---http---wordpress-plugin-exploit)
+- [Privilege Escalation](#privilege-escalation)
+  - [Root - Via SUID Binary (Path Hijacking)](#root---via-suid-binary-path-hijacking)
+
+
+
 # Recon
 ## TCP/80 - HTTP
 ### FFUF
