@@ -195,7 +195,7 @@ er+ 9543 requests: 0 error(s) and 13 item(s) reported on remote host
 	```
 6. Login w/ admin:ackbar
 
-## Back to TCP/80 - OpenEMR RCE
+## TCP/80 - OpenEMR RCE
 1. Since we do not have TCP/22 up, it is very likely we gain initial foothold via RCE
 2. Search RCE exploits for `OpenEMR v4.1.0`
 	
