@@ -64,7 +64,7 @@ index.html              [Status: 200, Size: 215, Words: 7, Lines: 9]
 ## BOF
 1. Determine min buffer size till EIP overflows with A
 	- Buffer Size: 600
-		![](images/Pasted%20image%2020220203025644.png)
+	![](images/Pasted%20image%2020220203025644.png)
 	![](images/Pasted%20image%2020220203025439.png)
 	- Program crashed at 600As
 	- EIP is filled with As.
