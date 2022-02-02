@@ -1,3 +1,16 @@
+# Table of contents
+
+- [Recon](#recon)
+  - [TCP/9999](#tcp9999)
+  - [TCP/10000 - HTTP](#tcp10000---http)
+    - [FFUF](#ffuf)
+- [Initial Foothold](#initial-foothold)
+  - [TCP/10000 - HTTP - BOF Binary](#tcp10000---http---bof-binary)
+  - [BOF](#bof)
+- [TCP/9999 - BOF](#tcp9999---bof)
+- [Privilege Escalation](#privilege-escalation)
+  - [Root - Via Sudo (GTFO Bin)](#root---via-sudo-gtfo-bin)
+
 # Recon
 ## TCP/9999
 - BOF executable running
