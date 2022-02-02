@@ -1,3 +1,16 @@
+# Table of contents
+
+- [Recon](#recon)
+  - [NMAP](#nmap)
+  - [TCP/80 - HTTP](#tcp80---http)
+    - [FFUF](#ffuf)
+- [Initial Foothold](#initial-foothold)
+  - [TCP/80 - HTTP](#tcp80---http)
+- [Privilege Escalation](#privilege-escalation)
+  - [Saket - Via Sudo + Creds Found + Cryptography](#saket---via-sudo--creds-found--cryptography)
+  - [Root - Via Sudo](#root---via-sudo)
+  - [Root - Via Kernel Exploit](#root---via-kernel-exploit)
+
 # Recon
 
 ## NMAP
