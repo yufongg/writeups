@@ -1,3 +1,19 @@
+# Table of contents
+
+- [Recon](#recon)
+  - [NMAP](#nmap)
+  - [TCP/80 - HTTP](#tcp80---http)
+    - [FFUF](#ffuf)
+    - [Nikto](#nikto)
+  - [TCP/8585 - HTTP](#tcp8585---http)
+    - [FFUF](#ffuf)
+- [Initial Foothold](#initial-foothold)
+  - [TCP/8585 - Gitea](#tcp8585---gitea)
+  - [TCP/80 - October CMS (RCE)](#tcp80---october-cms-rce)
+- [Privilege Escalation](#privilege-escalation)
+  - [Frank - Via Creds Found in Linux + Gitea (RCE)](#frank---via-creds-found-in-linux--gitea-rce)
+  - [Root - Via Sudo Exploit + Sudo GTFO Bin](#root---via-sudo-exploit--sudo-gtfo-bin)
+
 # Recon
 ## NMAP
 - tcp/22
