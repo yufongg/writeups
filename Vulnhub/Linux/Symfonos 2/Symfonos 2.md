@@ -1,21 +1,17 @@
-# Table of Contents
+# Table of contents
+
 - [Recon](#recon)
-  * [TCP/21 - FTP](#tcp-21---ftp)
-    + [NMAP Scan](#nmap-scan)
-  * [TCP/80 - HTTP](#tcp-80---http)
-    + [FFUF](#ffuf)
-    + [Nikto](#nikto)
-  * [TCP/139,445 - SMB](#tcp-139-445---smb)
-    + [Enum4linux](#enum4linux)
-    + [Crackmapexec + SMBMap](#crackmapexec---smbmap)
+  - [TCP/21 - FTP](#tcp21---ftp)
+  - [TCP/80 - HTTP](#tcp80---http)
+  - [TCP/139,445 - SMB](#tcp139445---smb)
 - [Initial Foothold](#initial-foothold)
-  * [TCP/80 - HTTP - No Exploits](#tcp-80---http---no-exploits)
-  * [TCP/139,445 - SMB](#tcp-139-445---smb-1)
-  * [TCP/21 - FTP - ProFTPD 1.3.5 File Copy](#tcp-21---ftp---proftpd-135-file-copy)
-  * [TCP/22 - SSH](#tcp-22---ssh)
+  - [TCP/80 - HTTP - No Exploits](#tcp80---http---no-exploits)
+  - [TCP/139,445 - SMB](#tcp139445---smb)
+  - [TCP/21 - FTP - ProFTPD 1.3.5 File Copy](#tcp21---ftp---proftpd-135-file-copy)
+  - [TCP/22 - SSH](#tcp22---ssh)
 - [Privilege Escalation](#privilege-escalation)
-  * [Cronus - Via LibreNMS CMS Authenticated RCE](#cronus---via-librenms-cms-authenticated-rce)
-  * [Root - Via Sudo GTFO Bin](#root---via-sudo-gtfo-bin)
+  - [Cronus - Via LibreNMS CMS Authenticated RCE](#cronus---via-librenms-cms-authenticated-rce)
+  - [Root - Via Sudo GTFO Bin](#root---via-sudo-gtfo-bin)
 # Recon
 
 ## TCP/21 - FTP
