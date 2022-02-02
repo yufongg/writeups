@@ -1,3 +1,16 @@
+# Table of contents
+
+- [Recon](#recon)
+  - [TCP/80 - HTTP](#tcp80---http)
+    - [FFUF](#ffuf)
+- [Initial Foothold](#initial-foothold)
+  - [TCP/80 - HTTP - Cewl + Joomla Bruteforce + Shell Upload](#tcp80---http---cewl--joomla-bruteforce--shell-upload)
+- [Privilege Escalation](#privilege-escalation)
+  - [Rob - Via SQL Creds Found](#rob---via-sql-creds-found)
+  - [Abner - Via Ciphertext](#abner---via-ciphertext)
+  - [Penguin - Via Creds Found + Cracking Zip file](#penguin---via-creds-found--cracking-zip-file)
+  - [Root - Via Cronjob](#root---via-cronjob)
+
 # Recon
 ## TCP/80 - HTTP
 ### FFUF
