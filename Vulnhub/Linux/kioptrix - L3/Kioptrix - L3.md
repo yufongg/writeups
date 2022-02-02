@@ -1,3 +1,16 @@
+# Table of contents
+
+- [Recon](#recon)
+  - [TCP/80 - HTTP](#tcp80---http)
+    - [FFUF](#ffuf)
+- [Initial Foothold](#initial-foothold)
+  - [TCP/80 - HTTP - Louts CMS Exploit](#tcp80---http---louts-cms-exploit)
+- [Privilege Escalation](#privilege-escalation)
+  - [Loneferret - Via Creds Found](#loneferret---via-creds-found)
+  - [Root - Via Buffer Overflow](#root---via-buffer-overflow)
+  - [Root - Via Sudo](#root---via-sudo)
+- [Privilege Escalation to Root - 3 via Kernel Exploit](#privilege-escalation-to-root---3-via-kernel-exploit)
+
 # Recon
 ## TCP/80 - HTTP
 ### FFUF
