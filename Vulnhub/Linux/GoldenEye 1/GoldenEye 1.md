@@ -1,3 +1,19 @@
+# Table of contents
+
+- [Recon](#recon)
+  - [TCP/80 - HTTP](#tcp80---http)
+    - [FFUF](#ffuf)
+    - [Nikto](#nikto)
+- [Initial Foothold](#initial-foothold)
+  - [TCP/80 - HTTP - Hidden Directory & Text](#tcp80---http---hidden-directory--text)
+  - [TCP/55007 - POP3 - Bruteforce + Access Emails](#tcp55007---pop3---bruteforce--access-emails)
+  - [Back to TCP/80 - Obtain More Creds](#back-to-tcp80---obtain-more-creds)
+  - [Back to TCP/55007 - POP3](#back-to-tcp55007---pop3)
+  - [Back to TCP/80 - Obtain More Creds + Moodle CMS Exploit (RCE)](#back-to-tcp80---obtain-more-creds--moodle-cms-exploit-rce)
+- [Privilege Escalation](#privilege-escalation)
+  - [Rabbit Hole - SQL Creds](#rabbit-hole---sql-creds)
+  - [Root - Via Kernel Exploit](#root---via-kernel-exploit)
+
 # Recon
 ## TCP/80 - HTTP
 ### FFUF
