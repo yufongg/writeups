@@ -2,8 +2,13 @@
 
 - [Recon](#recon)
   - [TCP/21 - FTP](#tcp21---ftp)
+    - [NMAP Scan](#nmap-scan)
   - [TCP/80 - HTTP](#tcp80---http)
+    - [FFUF](#ffuf)
+    - [Nikto](#nikto)
   - [TCP/139,445 - SMB](#tcp139445---smb)
+    - [Enum4linux](#enum4linux)
+    - [Crackmapexec + SMBMap](#crackmapexec--smbmap)
 - [Initial Foothold](#initial-foothold)
   - [TCP/80 - HTTP - No Exploits](#tcp80---http---no-exploits)
   - [TCP/139,445 - SMB](#tcp139445---smb)
@@ -12,6 +17,8 @@
 - [Privilege Escalation](#privilege-escalation)
   - [Cronus - Via LibreNMS CMS Authenticated RCE](#cronus---via-librenms-cms-authenticated-rce)
   - [Root - Via Sudo GTFO Bin](#root---via-sudo-gtfo-bin)
+
+
 # Recon
 
 ## TCP/21 - FTP
