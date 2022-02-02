@@ -1,3 +1,19 @@
+# Table of contents
+
+- [Recon](#recon)
+  - [TCP/80 - HTTP](#tcp80---http)
+    - [FFUF](#ffuf)
+  - [TCP/443 - HTTPS](#tcp443---https)
+    - [FFUF](#ffuf)
+    - [NMAP Scan:](#nmap-scan)
+- [Initial Foothold](#initial-foothold)
+  - [TCP/80 - HTTP - Obtain some credentials](#tcp80---http---obtain-some-credentials)
+  - [openssl 0.9.8c-1 Exploit](#openssl-098c-1-exploit)
+  - [TCP/22 - SSH](#tcp22---ssh)
+- [Privilege Escalation](#privilege-escalation)
+  - [Root - Via Decompiling Python Binary + Sudo](#root---via-decompiling-python-binary--sudo)
+
+
 # Recon
 ## TCP/80 - HTTP
 ### FFUF
