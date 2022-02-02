@@ -4,7 +4,7 @@
   - [TCP/80 - HTTP](#tcp80---http)
     - [FFUF](#ffuf)
 - [Initial Foothold](#initial-foothold)
-  - [TCP/80 - HTTP - Louts CMS Exploit](#tcp80---http---louts-cms-exploit)
+  - [TCP/80 - HTTP - Louts CMS Exploit](#tcp80---http---lotus-cms-exploit)
 - [Privilege Escalation](#privilege-escalation)
   - [Loneferret - Via Creds Found](#loneferret---via-creds-found)
   - [Root - Via Buffer Overflow](#root---via-buffer-overflow)
@@ -58,7 +58,7 @@ update.php              [Status: 200, Size: 18, Words: 2, Lines: 1]
 
 
 # Initial Foothold
-## TCP/80 - HTTP - Louts CMS Exploit
+## TCP/80 - HTTP - Lotus CMS Exploit
 1. View enumerated directories
 	- `update.php`
 		- Permission Denied
