@@ -1,4 +1,20 @@
-# Enumeration
+# Table of contents
+
+- [Recon](#Recon)
+  - [NMAP](#nmap)
+  - [FFUF (tcp/80)](#ffuf-tcp80)
+  - [FFUF (tcp/8008)](#ffuf-tcp8008)
+- [Obtaining Initial Foothold](#obtaining-initial-foothold)
+  - [Port 80 (HTTP)](#port-80-http)
+  - [Port 65534 (FTP)](#port-65534-ftp)
+  - [Port 8008 (HTTP)](#port-8008-http)
+  - [Cracking Zip File](#cracking-zip-file)
+  - [Back to Port 80 (HTTP)](#back-to-port-80-http)
+  - [SSH](#ssh)
+- [Privilege Escalation](#privilege-escalation)
+  - [www-data](#www-data)
+
+# Recon
 ## NMAP
 - tcp/22
 - tcp/80
