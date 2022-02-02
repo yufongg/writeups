@@ -1,3 +1,15 @@
+# Table of contents
+
+- [Recon](#recon)
+  - [TCP/80 - HTTP](#tcp80---http)
+    - [FFUF](#ffuf)
+  - [TCP/80 - HTTPS](#tcp80---https)
+    - [FFUF](#ffuf)
+- [Initial Foothold](#initial-foothold)
+  - [TCP/80 - HTTP - SQLi + Command Injection](#tcp80---http---sqli--command-injection)
+- [Privilege Escalation](#privilege-escalation)
+  - [Root - Via Kernel Exploit](#root---via-kernel-exploit)
+
 # Recon
 ## TCP/80 - HTTP
 ### FFUF
