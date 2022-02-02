@@ -1,3 +1,23 @@
+# Table of contents
+
+- [Recon](#recon)
+  - [TCP/80 - HTTP](#tcp80---http)
+    - [FFUF/FEROX](#ffufferox)
+    - [Nikto](#nikto)
+  - [TCP/443 - HTTPS](#tcp443---https)
+    - [FFUF](#ffuf)
+    - [Nikto](#nikto)
+  - [TCP/139,445 - SMB](#tcp139445---smb)
+    - [Enum4linux](#enum4linux)
+    - [SMBMap + Crackmapexec](#smbmap--crackmapexec)
+- [Initial Foothold](#initial-foothold)
+  - [TCP/80 - HTTP - No Exploits Found](#tcp80---http---no-exploits-found)
+  - [TCP/443 - HTTPS - No Exploits Found](#tcp443---https---no-exploits-found)
+  - [TCP/139,445 - SMB - Samba 2.2.1a Exploit](#tcp139445---smb---samba-221a-exploit)
+- [Privilege Escalation](#privilege-escalation)
+  - [Root - Via](#root---via)
+
+
 # Recon
 ## TCP/80 - HTTP
 ### FFUF/FEROX
