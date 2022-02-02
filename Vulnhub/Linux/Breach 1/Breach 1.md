@@ -1,3 +1,21 @@
+# Table of contents
+
+- [Recon](#recon)
+  - [NMAP](#nmap)
+  - [TCP/80 - HTTP](#tcp80---http)
+    - [Ferox](#ferox)
+- [Initial Access](#initial-access)
+  - [Port 80 - HTTP - Obtain Wireshark File + Key](#port-80---http---obtain-wireshark-file--key)
+  - [Exporting SSL certificate/Key from Keystore](#exporting-ssl-certificatekey-from-keystore)
+  - [Decrypting & Analyzing SSL traffic](#decrypting--analyzing-ssl-traffic)
+  - [Port 8443 (HTTPS)](#port-8443-https)
+- [Privilege Escalation](#privilege-escalation)
+  - [milton (Creds Found)](#milton-creds-found)
+  - [blumbergh (Image Forensics from earlier)](#blumbergh-image-forensics-from-earlier)
+  - [Root (GTFO Bin)](#root-gtfo-bin)
+  - [Root (Service)](#root-service)
+  - [Root (kernel exploit) - Did not work](#root-kernel-exploit---did-not-work)
+
 # Recon
 ## NMAP
 -  All ports are open
