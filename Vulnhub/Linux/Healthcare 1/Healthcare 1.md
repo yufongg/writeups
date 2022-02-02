@@ -1,17 +1,20 @@
-# Table of Contents
+# Table of contents
+
 - [Recon](#recon)
-  * [TCP/21 - FTP](#tcp-21---ftp)
-  * [TCP/80 - HTTP](#tcp-80---http)
-    + [Ferox](#ferox)
-    + [Nikto](#nikto)
+  - [TCP/21 - FTP](#tcp21---ftp)
+  - [TCP/80 - HTTP](#tcp80---http)
+    - [Ferox](#ferox)
+    - [Nikto](#nikto)
 - [Initial Foothold](#initial-foothold)
-  * [TCP/80 - HTTP - OpenEMR SQLi](#tcp-80---http---openemr-sqli)
-  * [TCP/80 - OpenEMR RCE](#tcp-80---openemr-rce)
+  - [TCP/80 - HTTP - OpenEMR SQLi](#tcp80---http---openemr-sqli)
+  - [TCP/80 - OpenEMR RCE](#tcp80---openemr-rce)
 - [Initial Foothold 2](#initial-foothold-2)
-  * [TCP/21 - FTP - Upload Reverse Shell](#tcp-21---ftp---upload-reverse-shell)
+  - [TCP/21 - FTP - Upload Reverse Shell](#tcp21---ftp---upload-reverse-shell)
 - [Privilege Escalation](#privilege-escalation)
-  * [Medical - Via Creds Found](#medical---via-creds-found)
-  * [Root - Via SUID Binary (Path Hijacking)](#root---via-suid-binary--path-hijacking-)
+  - [Medical - Via Creds Found](#medical---via-creds-found)
+  - [Root - Via SUID Binary (Path Hijacking)](#root---via-suid-binary-path-hijacking)
+
+
 # Recon
 ## TCP/21 - FTP
 - Anonymous access denied
