@@ -1,3 +1,20 @@
+# Table of contents
+
+- [Recon](#recon)
+  - [TCP/22 - SSH](#tcp22---ssh)
+    - [Port Knocking](#port-knocking)
+    - [NMAP](#nmap)
+  - [TCP/1337 - HTTP](#tcp1337---http)
+    - [NMAP](#nmap)
+    - [FFUF](#ffuf)
+- [Initial Foothold](#initial-foothold)
+  - [TCP/80 - HTTP - SQLi (Blind) Database Enumeration](#tcp80---http---sqli-blind-database-enumeration)
+  - [TCP/22 - SSH - Bruteforce](#tcp22---ssh---bruteforce)
+- [Privilege Escalation](#privilege-escalation)
+  - [Root - Via MySQL running as Root](#root---via-mysql-running-as-root)
+  - [Root - Via Kernel Exploit](#root---via-kernel-exploit)
+  - [Root - Via BufferOverflow](#root---via-bufferoverflow)
+
 # Recon
 - Only TCP/22 - SSH is up
 
