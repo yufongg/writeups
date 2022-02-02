@@ -57,7 +57,6 @@ index.html              [Status: 200, Size: 215, Words: 7, Lines: 9]
 	```
 	┌──(root💀kali)-[~/vulnHub/brainpan-1/192.168.110.9/exploit]
 	└─# wget http://192.168.110.9:10000/bin/brainpan.exe -q
-
 	```
 2. Transfer it to Windows machine to create a payload.
 
