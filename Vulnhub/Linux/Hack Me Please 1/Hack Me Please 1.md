@@ -1,3 +1,19 @@
+# Table of contents
+
+- [Recon](#recon)
+  - [TCP/80 - HTTP](#tcp80---http)
+    - [FFUF](#ffuf)
+  - [TCP/33060 - SOCKS5](#tcp33060---socks5)
+    - [NMAP Scan](#nmap-scan)
+- [Initial Foothold](#initial-foothold)
+  - [TCP/80 - HTTP - SeedDMS Misconfiguration](#tcp80---http---seeddms-misconfiguration)
+  - [TCP/3306 - mysql](#tcp3306---mysql)
+  - [Back to TCP/80 - HTTP - SeedDMS RCE](#back-to-tcp80---http---seeddms-rce)
+  - [Alternate Way - Log File](#alternate-way---log-file)
+- [Privilege Escalation](#privilege-escalation)
+  - [Saket - Via Creds Found](#saket---via-creds-found)
+  - [Root - Via Sudo](#root---via-sudo)
+
 # Recon
 ## TCP/80 - HTTP
 ### FFUF
