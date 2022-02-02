@@ -1,3 +1,15 @@
+# Table of contents
+
+- [Recon](#recon)
+  - [NMAP](#nmap)
+  - [TCP/80 - HTTP](#tcp80---http)
+    - [FFUF](#ffuf)
+- [Initial Foothold](#initial-foothold)
+  - [TCP/80 - HTTP](#tcp80---http)
+- [Privilege Escalation](#privilege-escalation)
+  - [Elliot - Via Creds Found](#elliot---via-creds-found)
+  - [Root - Via Sudo](#root---via-sudo)
+
 # Recon
 ## NMAP
 - tcp/80
