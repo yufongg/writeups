@@ -1,3 +1,16 @@
+# Table of contents
+
+- [Recon](#recon)
+  - [TCP/80 - HTTP](#tcp80---http)
+    - [FFUF](#ffuf)
+    - [Nikto](#nikto)
+- [Initial Foothold](#initial-foothold)
+  - [TCP/80 - HTTP - Rabbit Hole](#tcp80---http---rabbit-hole)
+  - [TCP/22 - SSH](#tcp22---ssh)
+- [Privilege Escalation](#privilege-escalation)
+  - [Root - Via SUID Binary (GTFO BIN)](#root---via-suid-binary-gtfo-bin)
+
+
 # Recon
 ## TCP/80 - HTTP
 ### FFUF
