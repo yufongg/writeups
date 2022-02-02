@@ -1,3 +1,19 @@
+# Table of contents
+
+- [Recon](#recon)
+  - [NMAP](#nmap)
+  - [TCP/139,445 - SMB](#tcp139445---smb)
+    - [Enum4linux](#enum4linux)
+    - [Crackmapexec + SMBMap](#crackmapexec--smbmap)
+  - [TCP/80](#tcp80)
+    - [FFUF](#ffuf)
+- [Initial Foothold](#initial-foothold)
+  - [TCP/139,445 - SMB](#tcp139445---smb)
+  - [TCP/80 - HTTP](#tcp80---http)
+  - [TCP/22 - SSH](#tcp22---ssh)
+- [Privilege Escalation](#privilege-escalation)
+  - [Root via Sudo](#root-via-sudo)
+
 # Recon
 
 ## NMAP
