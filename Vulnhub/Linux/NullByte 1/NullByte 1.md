@@ -1,3 +1,17 @@
+# Table of contents
+
+- [Recon](#recon)
+  - [TCP/80 - HTTP](#tcp80---http)
+    - [FFUF](#ffuf)
+- [Initial Foothold](#initial-foothold)
+  - [TCP/80 - HTTP - Image Forensics + HTTP Form Bruteforce](#tcp80---http---image-forensics--http-form-bruteforce)
+  - [TCP/80 - HTTP - SQLi Database Enum w/ SQLMap](#tcp80---http---sqli-database-enum-w-sqlmap)
+  - [TCP/80 - HTTP - SQLi Database Enum Manual](#tcp80---http---sqli-database-enum-manual)
+  - [TCP/777 - SSH](#tcp777---ssh)
+- [Privilege Escalation](#privilege-escalation)
+  - [Root - Via SUID Binary (Path Hijacking)](#root---via-suid-binary-path-hijacking)
+  - [Root - Via Kernel Exploit](#root---via-kernel-exploit)
+
 # Recon
 ## TCP/80 - HTTP
 ### FFUF
