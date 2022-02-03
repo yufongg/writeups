@@ -1,3 +1,21 @@
+# Table of contents
+
+- [Recon](#recon)
+  - [TCP/80 - HTTP](#tcp80---http)
+    - [FFUF](#ffuf)
+  - [TCP/139,445 - SMB](#tcp139445---smb)
+    - [Enum4linux](#enum4linux)
+    - [Crackmapexec](#crackmapexec)
+    - [SMBMap](#smbmap)
+  - [TCP/8000 - HTTP](#tcp8000---http)
+    - [FFUF](#ffuf)
+- [Initial Foothold](#initial-foothold)
+  - [TCP/80 - HTTP - No Exploit](#tcp80---http---no-exploit)
+  - [TCP/139,445 - SMB](#tcp139445---smb)
+  - [TCP/8000 - HTTP - Koken CMS File Upload](#tcp8000---http---koken-cms-file-upload)
+- [Privilege Escalation](#privilege-escalation)
+  - [Root - Via](#root---via)
+
 # Recon
 ## TCP/80 - HTTP
 ### FFUF
