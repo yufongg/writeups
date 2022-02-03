@@ -90,7 +90,6 @@ uploads                 [Status: 301, Size: 318, Words: 20, Lines: 10]
 	index.html              [Status: 200, Size: 113, Words: 6, Lines: 7]
 	:: Progress: [18460/18460] :: Job [1/1] :: 215 req/sec :: Duration: [0:00:04] :: Errors: 0 ::
 	```
-	- `uploads` is a static html page, not a directory
 3. Tried some default creds on `phpmyadmin`, failed
 4. Only clue we have is the image, download the image
 	```
