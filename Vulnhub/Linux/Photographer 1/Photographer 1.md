@@ -190,7 +190,7 @@ SMB         192.168.110.10  445    PHOTOGRAPHER     IPC$                        
 	```
 
 # Privilege Escalation
-## Root - Via
+## Root - Via SUID Binary (GTFO Bins)
 1. Since there is a CMS, we can obtain more credentials by finding its SQL configuration file.
 	- [Google](https://www.inmotionhosting.com/support/website/how-to-fix-koken-database-connection-errors/) 
 2. Find SQL Configuration file
