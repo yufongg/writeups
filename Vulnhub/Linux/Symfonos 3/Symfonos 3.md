@@ -1,3 +1,15 @@
+# Table of contents
+
+- [Recon](#recon)
+  - [TCP/21 - FTP](#tcp21---ftp)
+  - [TCP/80 - HTTP](#tcp80---http)
+    - [FFUF](#ffuf)
+- [Initial Foothold](#initial-foothold)
+  - [TCP/80 - HTTP - Shell Shock](#tcp80---http---shell-shock)
+- [Privilege Escalation](#privilege-escalation)
+  - [Hades - Via Cronjob + TCPDump](#hades---via-cronjob--tcpdump)
+  - [Root - Via Cronjob + Python Hijacking](#root---via-cronjob--python-hijacking)
+
 # Recon
 
 ## TCP/21 - FTP
