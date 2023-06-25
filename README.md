@@ -1,5 +1,5 @@
 # Writeups
-
+Please visit https://yufongg.github.io instead
 # Machines:
 
 | # | Platform | Machines |
